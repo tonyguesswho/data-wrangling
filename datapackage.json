@@ -1,0 +1,33 @@
+{
+  "profile": "tabular-data-package",
+  "resources": [
+    {
+      "name": "Daily Prices",
+      "path": "data/output.csv",
+      "profile": "tabular-data-resource",
+      "schema": {
+        "fields": [
+          {
+            "name": "Date",
+            "type": "string",
+            "title": "Date",
+            "description": "Date"
+          },
+          {
+            "name": "Price",
+            "type": "number",
+            "title": "Price",
+            "description": "Price"
+          }
+        ]
+      }
+    }
+  ],
+  "licenses": [
+    {
+      "name": "CC0-1.0",
+      "title": "CC0 1.0",
+      "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+    }
+  ]
+}
