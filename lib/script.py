@@ -11,6 +11,7 @@ class OpenDataApi:
         self.params = {"series_id":series_id, "api_key":self.API_KEY}
         self.data = None
 
+    # get prices from EIA data
     @property
     def get(self):
         try:
@@ -19,6 +20,7 @@ class OpenDataApi:
         except Exception as e:
             raise Exception(e)
 
+    # format date        
     def format(self, type):
         final_data = []
         for data in self.data:
@@ -29,7 +31,7 @@ class OpenDataApi:
             final_data.append(details)
         self.data= final_data
 
-        
+     # generate csv outputs   
     def get_prices_in_csv(self, type):
         self.get
         self.format(type)
